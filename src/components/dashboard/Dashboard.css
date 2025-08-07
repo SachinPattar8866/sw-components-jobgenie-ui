@@ -1,0 +1,42 @@
+@import url('../../styles/variables.css');
+
+.dashboard-container {
+    max-width: 800px;
+    margin: var(--spacing-lg) auto;
+    padding: var(--spacing-lg);
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.dashboard-container h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-lg);
+}
+
+.dashboard-container p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.error-message {
+    color: var(--error-color);
+    background: #fff0f0;
+    border: 1px solid var(--error-color);
+    padding: var(--spacing-sm);
+    border-radius: 4px;
+    text-align: center;
+    margin: var(--spacing-md) 0;
+}
+
+.success-message {
+    color: var(--success-color);
+    background: #f0fff4;
+    border: 1px solid var(--success-color);
+    padding: var(--spacing-sm);
+    border-radius: 4px;
+    text-align: center;
+    margin: var(--spacing-md) 0;
+}
