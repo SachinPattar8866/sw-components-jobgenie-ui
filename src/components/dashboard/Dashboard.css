@@ -40,3 +40,125 @@
     text-align: center;
     margin: var(--spacing-md) 0;
 }
+
+.resume-upload {
+    margin-top: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.upload-label {
+    font-weight: 600;
+}
+
+.file-info {
+    font-size: 0.95rem;
+    color: var(--text-color);
+}
+
+.upload-card.dragging {
+    background: #f0f9ff;
+    border-color: #60a5fa;
+}
+
+.upload-card:hover {
+    box-shadow: 0 6px 14px rgba(2,6,23,0.06);
+    cursor: pointer;
+}
+
+.upload-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.upload-actions button {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--primary-color);
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+}
+
+.upload-actions button[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.resume-preview {
+    margin-top: var(--spacing-lg);
+}
+
+.preview-box {
+    white-space: pre-wrap;
+    background: #f7f7f7;
+    padding: var(--spacing-sm);
+    border-radius: 6px;
+    max-height: 300px;
+    overflow: auto;
+}
+
+.muted {
+    color: #666;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.primary-btn {
+    background: linear-gradient(90deg,#6d28d9,#2563eb);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+}
+
+.ghost-btn {
+    /* Match primary button appearance so Clear is clearly visible */
+    background: linear-gradient(90deg,#6d28d9,#2563eb);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(37,99,235,0.12);
+}
+.ghost-btn:hover {
+    filter: brightness(0.95);
+}
+.ghost-btn:focus {
+    outline: 2px solid rgba(37,99,235,0.15);
+}
+
+.upload-card {
+    background: #fff;
+    border: 1px dashed #cbd5e1;
+    padding: 18px;
+    border-radius: 8px;
+}
+
+.upload-inner {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.doc-icon { font-size: 40px }
+
+.progress { height: 8px; background: #f1f5f9; border-radius: 8px; margin-top: 8px; }
+.progress > div { height: 100%; background: linear-gradient(90deg,#60a5fa,#06b6d4); border-radius: 8px; }
+
+.resume-list { margin-top: 18px }
+.uploads-table { width: 100%; border-collapse: collapse }
+.uploads-table th, .uploads-table td { text-align: left; padding: 10px; border-bottom: 1px solid #f1f5f9 }
+.badge { padding: 6px 8px; border-radius: 999px; font-weight: 600 }
+.badge.green { background: #ecfeff; color: #065f46 }
+.badge.gray { background: #f8fafc; color: #334155 }
+
+.empty-state { padding: 28px; text-align: center; color: #64748b; border: 1px dashed #e2e8f0; border-radius: 8px }
