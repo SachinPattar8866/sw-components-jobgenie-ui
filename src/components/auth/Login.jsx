@@ -17,7 +17,8 @@ function Login({ showSignupLink }) {
         setLoading(true);
         try {
             const idToken = await loginWithEmail(email, password);
-            await login(idToken);
+            const res = await login(idToken);
+            // token is stored by api.login; proceed
             navigate('/dashboard');
         } catch (err) {
             console.error('Login failed:', err);

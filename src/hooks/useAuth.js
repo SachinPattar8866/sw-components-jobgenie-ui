@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../services/firebase';
-import axios from 'axios';
+import api from '../services/api';
 
 function useAuth() {
     const [user, setUser] = useState(null);
@@ -10,11 +10,10 @@ function useAuth() {
     useEffect(() => {
         const checkBackendSession = async () => {
             try {
-                const res = await axios.get("http://localhost:8080/api/protected/dashboard", {
-                    withCredentials: true,
-                });
+                // api instance already applies Authorization header from localStorage
+                const res = await api.get('/protected/dashboard');
                 if (res.status === 200) {
-                    setUser(true);  // Set to 'true' since we don't get user data from backend
+                    setUser(true);
                 } else {
                     setUser(null);
                 }
